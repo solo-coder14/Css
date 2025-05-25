@@ -1,0 +1,132 @@
+#seek-bar {
+    -webkit-appearance: none; /* Remove default browser styles */
+    appearance: none;
+    width: 100%; /* Full width */
+    height: 6px; /* Thin track height */
+    background: #535353; /* Gray background for the unplayed track */
+    border-radius: 5px; /* Rounded track corners */
+    outline: none; /* Remove outline */
+    cursor: pointer; /* Pointer cursor */
+}
+
+/* Highlighted (filled) track portion */
+#seek-bar::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #1DB954, #535353); /* Green progress */
+    height: 6px;
+    border-radius: 5px;
+}
+
+#seek-bar::-moz-range-track {
+    background: linear-gradient(to right, #1DB954, #535353);
+    height: 6px;
+    border-radius: 5px;
+}
+
+#seek-bar::-ms-track {
+    background: #535353;
+    height: 6px;
+    border-radius: 5px;
+    border-color: transparent;
+    color: transparent;
+}
+
+/* Thumb styles */
+#seek-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px; /* Small, modern thumb size */
+    height: 12px;
+    background: #fff; /* White thumb */
+    border-radius: 50%; /* Circular thumb */
+    border: 2px solid #1DB954; /* Green border for the thumb */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+}
+
+#seek-bar::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    border: 2px solid #1DB954;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+}
+
+#seek-bar::-ms-thumb {
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    border: 2px solid #1DB954;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+}
+
+/* Hover effect on the thumb */
+#seek-bar::-webkit-slider-thumb:hover {
+    transform: scale(1.2); /* Enlarge thumb slightly on hover */
+    background: #f1f1f1; /* Slightly lighter white */
+}
+
+#seek-bar::-moz-range-thumb:hover,
+#seek-bar::-ms-thumb:hover {
+    transform: scale(1.2);
+    background: #f1f1f1;
+}
+
+/* Active (dragging) state for the thumb */
+#seek-bar::-webkit-slider-thumb:active {
+    transform: scale(1.3); /* Slightly larger on active */
+    background: #e0e0e0; /* Subtle change in color */
+}
+
+#seek-bar::-moz-range-thumb:active,
+#seek-bar::-ms-thumb:active {
+    transform: scale(1.3);
+    background: #e0e0e0;
+}
+
+/* General styles for the seek bar */
+#seek-bar {
+    -webkit-appearance: none; /* Remove default browser styles */
+    appearance: none;
+    width: 100%; /* Full width */
+    height: 8px; /* Height of the track */
+    background: #f70404; /* Dark background for the track */
+    border-radius: 5px; /* Rounded track corners */
+    outline: none; /* Remove outline */
+    transition: background 0.3s; /* Smooth transition */
+    cursor: pointer;
+}
+
+/* Highlighted (filled) track portion */
+#seek-bar::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #5a54ad, #831010); /* Green gradient */
+    height: 8px; /* Same height as the bar */
+    border-radius: 5px;
+}
+
+/* Thumb styles */
+#seek-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px; /* Size of the thumb */
+    height: 16px;
+    background: #9e1835; /* Green thumb */
+    border-radius: 50%; /* Circular thumb */
+    border: 2px solid #1600db; /* Optional black border for contrast */
+    transition: background 0.2s, transform 0.2s;
+}
+
+/* Thumb hover effect */
+#seek-bar::-webkit-slider-thumb:hover {
+    background: #17a517; /* Lighter green on hover */
+    transform: scale(1.2); /* Slightly enlarge */
+}
+
+button {
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}

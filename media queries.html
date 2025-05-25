@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: red;
+        }
+
+        @media screen and (orientation: portrait) {
+            body{
+            background: rgb(0, 255, 170);
+        }
+        }
+
+        @media only screen and (max-width: 455px) {
+            body{
+            background: rgb(0, 217, 255);
+        }
+        }
+
+        /* @media not|only mediatype and (expressions) CSS-Code; */
+    </style>
+</head>
+<body>
+    <div>
+        Full body color is red!
+    </div>
+</body>
+</html>

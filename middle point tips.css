@@ -1,0 +1,67 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.text {
+    color: white;
+}
+
+.sec {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Adds spacing between text and media */
+    flex-wrap: wrap;
+    /* Allows items to wrap on smaller screens */
+    max-width: 70vw;
+    margin: auto;
+    border: 3px solid white;
+    padding: 20px;
+    gap: 20px;
+    /* Adds space between items */
+}
+
+.box1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.box2 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.box2 video,
+.box2 img {
+    max-width: 100%;
+    /* Ensure the content doesn't exceed container width */
+    height: auto;
+    /* Maintain aspect ratio */
+    object-fit: contain;
+    /* Keeps the media properly fitted inside container */
+}
+
+@media (max-width: 768px) {
+    .sec {
+        flex-direction: column;
+        /* Stack items vertically on small screens */
+    }
+
+    .box1,
+    .box2 {
+        flex: none;
+        width: 100%;
+        /* Ensure full width on smaller screens */
+    }
+}

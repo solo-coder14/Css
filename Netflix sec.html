@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text {
+            color: white;
+        }
+
+        .sec {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            max-width: 70vw;
+            margin: auto;
+            border: 3px solid white;
+            background: #00aeff;
+            justify-content: center;
+        }
+
+        .box1 {
+            /* border: 3px solid white; */
+        }
+
+        .box2 {
+            position: relative;
+            border: 3px solid white;
+        }
+
+        .box2 video {
+            width: 50vw;
+            height: auto;
+            /* Maintain aspect ratio */
+            object-fit: contain;
+            position: absolute;
+            top: 5vw;
+            right: 0;
+            transform: scale(0.8);
+        }
+
+        .box2 img {
+            width: 50vw;
+            height: auto;
+            /* Maintain aspect ratio */
+            object-fit: contain;
+            position: relative;
+            z-index: 1;
+        }
+        @media screen and (max-width: 960px){
+            .sec {
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        }
+
+    </style>
+</head>
+
+<body>
+    <section class="sec sec1">
+        <div class="box box1">
+            <span class="text text1">Enjoy on your TV</span>
+            <span class="text text2">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and
+                more.</span>
+        </div>
+        <div class="box box2">
+            <img src="TV.png" alt="">
+            <video src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v"
+                autoplay loop muted></video>
+        </div>
+    </section>
+    <div class="separation"></div>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    p {
+      border: 2px solid rgb(0, 0, 0);
+    }
+
+    /* id */
+    #p1 {
+      color: red;
+    }
+
+    .bg {
+      background-color: yellow;
+    }
+
+    p.bg {
+      color: white !important;
+      background-color: rgb(255, 0, 0);
+      border: 0px;
+      text-align: center;
+    }
+
+    [data-x=a] {
+      background-color: rgb(186, 154, 216);
+    }
+
+    p, [data-color="primary"] {
+      color: blue;
+    }
+
+    /* div, p {
+      color: green;
+    } */
+
+    /* chile selector */
+    div>p {
+      color: blue;
+      background-color: #ff5733;
+    }
+
+    div p {
+      color: rgb(0, 112, 84);
+      background-color: rgb(188, 208, 224);
+    }
+
+    /* universal selector */
+    /* *{
+      margin: 0;
+      padding: 0;
+    } */
+    /* pseudo selector */
+    a:visited {
+      color: yellow;
+    }
+
+    a:link {
+      color: green;
+    }
+
+    a:active {
+      color: blue;
+    }
+
+    a:hover {
+      background-color: rgb(0, 255, 170);
+    }
+
+    main p:first-child {
+      background-color: aqua;
+    }
+
+    main p:nth-child(2) {
+      background-color: aqua;
+    }
+
+    body p:nth-child(3)::first-line {
+      color: rgb(0, 255, 76);
+    }
+
+    .box * {
+      background-color: blueviolet;
+      /* padding: 0; */
+      /* margin: 0; */
+    }
+    .box:nth-child(even){
+      border: 2px solid black;
+      background-color: rgb(0, 255, 76);
+    }
+    span:nth-last-child(1){
+      background-color: red;
+    }
+
+    .box::before{
+      content: "Hello it is a first block of content";
+    }
+    .box::after{
+      content: "Hello it is first block of content";
+      color:rgb(255, 0, 0)
+    }
+    .select::selection{
+      background-color: black;
+      color: aquamarine;
+    }
+    .box::first-letter{
+      color: peru;
+      font-size: 45px;
+    }
+    input::placeholder{
+      color: rosybrown;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div>
+    <p>This is a paragraph inside a div to demonstrate css selectors</p>
+    <p>This is a paragraph inside a div to demonstrate css selectors</p>
+    <p data-x="a">This is a paragraph inside a div to demonstrate css selectors</p>
+    <span>block of a span</span>
+  </div>
+  <main class="box">
+    <p>iamfirst</p>
+    <p>iamfirst</p>
+    <p>iamfirst</p>
+    <p>iamsecond</p>
+    <p>iamsecond</p>
+    <div class="select">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ea perferendis reprehenderit exercitationem. Qui expedita ex animi voluptates, laborum odio perferendis recusandae culpa aut dolore ducimus laboriosam vero aliquid. Aspernatur.
+    </div>
+  </main>
+  <p>This is a paragraph to demonstrate css selectors Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+    Accusamus ipsa culpa aliquid magnam laboriosam, dolorem perferendis, magni aut provident earum praesentium
+    consequuntur sunt optio officiis molestias et, expedita placeat porro.
+    Nostrum esse rem dignissimos obcaecati nesciunt, natus delectus vitae quidem odit incidunt beatae, velit voluptas,
+    ea architecto enim assumenda. Ipsum rem minus ut architecto? Sit esse fugit odit eaque voluptatem?
+    Accusamus quae veniam consequuntur. Quisquam tempore cupiditate aperiam quas neque excepturi odit recusandae nulla
+    fugit voluptas. Et, dignissimos! Eaque itaque magnam nostrum animi iste, in repellendus. Accusantium illo
+    dignissimos sunt.</p>
+  <p>This is a paragraph to demonstrate css selectors</p>
+  <p>This is a paragraph to demonstrate css selectors</p>
+  <p id="p1" class="bg">This is another paragraph to demonstrate css selectors &nbsp;&nbsp; space is added</p>
+  <a href="https://www.google.com">Go to gooole</a>
+  <br>
+  <a href="https://www.facebook.com">Go to facebook</a>
+  <span>Another Red color selector</span>
+  <div>
+    <input type="text" placeholder="Type your name here">
+  </div>
+</body>
+
+</html>
